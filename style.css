@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Yomogi&display=swap');
+
+:root {
+    --degree: 0deg;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(255, 154, 143);
+    font-family: 'Yomogi', cursive;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header {
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    font-size: 17px;
+}
+
+.upload-area {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.upload-area label {
+    border: 1px solid black;
+    padding: 10px 15px;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
+    cursor: pointer;
+    transition: all .1s ease-in;
+    margin-bottom: 20px;
+}
+
+.upload-area label:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.45) inset;
+    transform: scale(0.98);
+}
+
+.image-box {
+    height: 400px;
+    width: 400px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    border: none;
+    transform: rotate(var(--degree));
+}
+
+.control-box {
+    margin-top: 20px;
+}
+
+.control-box i {
+    font-size: 28px;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.45);
+    margin: 0 20px;
+    transition: all 0.1s ease-in;
+    cursor: pointer;
+}
+
+.control-box i:hover {
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.45);
+    transform: scale(0.9);
+}
+
+.non-active {
+    display: none;
+}
+
+.active {
+    display: block;
+    display: flex;
+    justify-content: center;
+}
